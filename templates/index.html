@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lancelot&family=Lato:ital,wght@0,100;0,300;0,400;0,700;1,100;1,300;1,400&family=Patrick+Hand+SC&family=Yantramanav&display=swap" rel="stylesheet">
+    <title>Fake News Detector</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/stylesheet.css')}}">
+    
+</head>
+<body>
+    <div>
+        <div class="border_1">
+            <hr id="line_1">
+            <hr id="line_2">
+            <hr id="line_3">
+            <hr id="line_4">
+            <hr id="line_5">
+            <hr id="line_6">
+        <h1 class="heading">Fake News Detector</h1></div>
+        <div class="adding_link">
+            <a href="" id="projects">Project Details</a>
+            <a href="" id="students">Studnets</a>
+    </div>
+</div>
+<div class="container_1">
+    <h2 id="p1">
+        The Rise of Deception: How Fake News is Infecting the Internet and Society
+    </h2>
+    <h3 id="p2">Falsehood flies, and the Truth comes limping after it." - Jonathan Swift</h3>
+    <h4 id="p3">In this modern era, the internet is the most important place where people get the news. Newspapers that were earlier preferred as hardcopies are now being substituted by applications like Facebook, Twitter, and news articles to be read online. The rapid spread of Fake News and disinformation online can have profound consequences. Examples include. Distrust in the media, Undermining the democratic process, Platforms for harmful conspiracy theories and hate speech, spread of false or discredited science - e.g., fake news spread on covid vaccines. It makes things more complicated and tries to change the opinion and attitude of people towards the use of digital technology. The ability to tell accurate news from "fake news" is an important skill that humans need for their life’s. This project comes with the solution of getting to know whether the circulated news was true or false. By using machine learning and NLP (Natural Language Processing) for textual classification. The result of a fake new identification studies that documentation of the performance of a fake news classifier is presented.
+        Here in this project, we will result the feature extraction and vectorization, also we use the python sklearn library to perform tokenization and feature extraction of textual data. Then we perform the feature selection methods to our process and we will select the best fit features to finally obtain highest precision, also we take this relation by considering the confusion matrix results.</h4>
+</div>
+<div class="container_2">
+<div class="class_1"><li id="text_1"> Verify sources always</div></div>
+<div class="container_3">
+<div class="class_2"><li id="text_2"> Stay informed constantly</div></div>
+<div class="container_4">
+<div class="class_3"><li id="text_3"> Analyze language patterns</div></div>
+<div class="container_5">
+<div class="class_4"><li id="text_4"> Seek multiple perspectives </div></div>
+<div class="container_7">
+<div class="class_6"><li id="text_6"> Question sensational claims </div></div>
+<div class="container_8">
+<div class="class_7"><li id="text_7"> Be wary online </div></div>
+<div class="container_9">
+<div class="class_8"><li id="text_8"> Question everything always </div></div>
+<div class="container_10">
+<div class="class_9"><li id="text_9"> ALook for evidence </div></div>
+
+</div>
+<div class="container_1_1">
+    <img src= "{{ url_for('static', filename='images/Group 5.svg')}}">
+ 
+    <hr id="line_1_1">
+</div>
+
+<div class="c1">
+    <h5 class="g1">Truth or Deception: Detect fake news in your own language!</h5>
+    <a class="news">News</a>
+    <a class="imp">*Enter the news in your language </a>
+
+    <form id="form_1" action="\prediction" method="POST">
+        <div class="svg_1"><img src="{{ url_for('static', filename='images/ts png.svg')}}"></div>
+        <input class="news_text" id="news_text" type="text" name="news_text">
+        <textarea name="ts_news" id="ts_news" class="ts_news"></textarea>
+        <button class="ts_1" type="button" name="translate"><a id="tsl">translate</a></button>
+        <button class="submit" type="submit" value="submit" form="form_1"><a id="submit_1">Submit</a></button>
+        
+        <select class="f1" id="f1"></select>
+        <select class="f2" id="f2">    
+        </select>
+    </form>
+    <div class="container_3_3">
+    <h3 class="real"><a id="real_news">{{ prediction_textsREAL }}</a></h3></div>
+<div class="container_3_2">
+    <h3 class="fake"><a id="fake_news">{{ prediction_textsFAKE }}</a></h3>
+</div>
+</div>
+
+<div class="container_4_1">
+   <h3 id="date"></h3>
+</div>
+<script src="{{ url_for('static', filename='script/clock.js') }}"></script>
+    <script src="{{ url_for('static', filename='script/countries.js') }}"></script>
+    <script src="{{ url_for('static', filename='script/script.js') }}"></script>
+</body>
+</html>
